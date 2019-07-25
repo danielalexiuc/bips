@@ -10,18 +10,13 @@
 The format for Bitcoin SV (BSV) URIs is as follows:
 
 <code>
-bitcoin:[address]?sv[&][querystring]
+bitcoinsv:[address]?[querystring]
 </code>
 
 Where:
 
 * [address] is a base58check encoded address (the original format)
 
-* sv is an empty parameter to denote that this is on the BSV blockchain
-
-* [&] is an (optional) ampersand to preceed the rest of the query string (if there is more to the query string)
-
 * [querystring] is the (optional) rest of the query string, which may include Payment Protocol parameters or anything else
 
-The format is exactly the same as BIP 21 except that we include the empty "sv"
-parameter to disambiguate BSV from BTC.
+The format is exactly the same as BIP 21 except that we prefix it with bitcoinsv: to disambiguate BSV from BTC.
